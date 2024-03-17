@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Photopop</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background:black;
+color:white;</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="file">
     <property name="geometry">
@@ -22,6 +26,12 @@
       <width>261</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:3px dashed #ffffff;
+border-radius: 12px;
+font-size:20px;
+font-weight:500;</string>
     </property>
     <property name="text">
      <string>File</string>
@@ -36,6 +46,12 @@
       <height>651</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border:3px solid #ffffff;
+border-radius: 12px;
+font-size:20px;
+font-weight:500;</string>
+    </property>
    </widget>
    <widget class="QLabel" name="pictures">
     <property name="geometry">
@@ -46,6 +62,12 @@
       <height>611</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border:3px dotted #ffffff;
+border-radius: 12px;
+font-size:20px;
+font-weight:500;</string>
+    </property>
     <property name="text">
      <string>Picture</string>
     </property>
@@ -53,11 +75,17 @@
    <widget class="QPushButton" name="left">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>650</y>
+      <x>290</x>
+      <y>680</y>
       <width>131</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:3px dashed #ffffff;
+border-radius: 10px;
+font-size:20px;
+font-weight:500;</string>
     </property>
     <property name="text">
      <string>Left</string>
@@ -66,11 +94,17 @@
    <widget class="QPushButton" name="right">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>650</y>
+      <x>430</x>
+      <y>680</y>
       <width>131</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:3px dashed #ffffff;
+border-radius: 10px;
+font-size:20px;
+font-weight:500;</string>
     </property>
     <property name="text">
      <string>Right</string>
@@ -79,11 +113,17 @@
    <widget class="QPushButton" name="mirror">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>650</y>
+      <x>570</x>
+      <y>680</y>
       <width>131</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:3px dashed #ffffff;
+border-radius: 10px;
+font-size:20px;
+font-weight:500;</string>
     </property>
     <property name="text">
      <string>Mirror</string>
@@ -92,11 +132,17 @@
    <widget class="QPushButton" name="sharpness">
     <property name="geometry">
      <rect>
-      <x>720</x>
-      <y>650</y>
+      <x>710</x>
+      <y>680</y>
       <width>131</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:3px dashed #ffffff;
+border-radius: 10px;
+font-size:20px;
+font-weight:500;</string>
     </property>
     <property name="text">
      <string>Sharpness</string>
@@ -105,11 +151,17 @@
    <widget class="QPushButton" name="b_w">
     <property name="geometry">
      <rect>
-      <x>860</x>
-      <y>650</y>
+      <x>850</x>
+      <y>680</y>
       <width>131</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:3px dashed #ffffff;
+border-radius: 10px;
+font-size:20px;
+font-weight:500;</string>
     </property>
     <property name="text">
      <string>Black/White</string>
