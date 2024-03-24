@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Photopop</class>
- <widget class="QMainWindow" name="Photopop">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>800</height>
+    <height>716</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -43,7 +43,7 @@ font-weight:500;</string>
       <x>20</x>
       <y>90</y>
       <width>261</width>
-      <height>651</height>
+      <height>601</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -75,8 +75,8 @@ font-weight:500;</string>
    <widget class="QPushButton" name="left">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>680</y>
+      <x>300</x>
+      <y>640</y>
       <width>131</width>
       <height>51</height>
      </rect>
@@ -94,8 +94,8 @@ font-weight:500;</string>
    <widget class="QPushButton" name="right">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>680</y>
+      <x>440</x>
+      <y>640</y>
       <width>131</width>
       <height>51</height>
      </rect>
@@ -113,8 +113,8 @@ font-weight:500;</string>
    <widget class="QPushButton" name="mirror">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>680</y>
+      <x>580</x>
+      <y>640</y>
       <width>131</width>
       <height>51</height>
      </rect>
@@ -132,8 +132,8 @@ font-weight:500;</string>
    <widget class="QPushButton" name="sharpness">
     <property name="geometry">
      <rect>
-      <x>710</x>
-      <y>680</y>
+      <x>720</x>
+      <y>640</y>
       <width>131</width>
       <height>51</height>
      </rect>
@@ -151,8 +151,8 @@ font-weight:500;</string>
    <widget class="QPushButton" name="b_w">
     <property name="geometry">
      <rect>
-      <x>850</x>
-      <y>680</y>
+      <x>860</x>
+      <y>640</y>
       <width>131</width>
       <height>51</height>
      </rect>
