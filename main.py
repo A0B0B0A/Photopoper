@@ -1,8 +1,10 @@
+from PyQt5.QtCore import Qt
 from PIL import Image, ImageFilter
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtWidgets import QMessageBox
+from PyQt5.QtGui import QPixmap
 from ui import Ui_MainWindow
 
 import os
@@ -18,8 +20,12 @@ class Widget(QMainWindow):
         self.image = None
 
         self.ui.file.clicked.connect(self.choose_folder)
+        self.ui.b_w.clicked.connect(self.bw_button)
+
+        self.ui.listpictures.currentRowChanged.connect(self.show_choosen_image)
 
     def choose_folder(self):
+        """вибір папки"""
         try:
             self.workdir = QFileDialog.getExistingDirectory()
             self.show_list_image()
@@ -29,6 +35,7 @@ class Widget(QMainWindow):
             error.exec_()
 
     def show_list_image(self):
+        """завантажуємо список картинок"""
         self.filenames = os.listdir(self.workdir)
         images = []
         for filename in self.filenames:
@@ -37,13 +44,43 @@ class Widget(QMainWindow):
         self.ui.listpictures.clear()
         self.ui.listpictures.addItems(images)
 
-#    def show_picture(self):
+    def load_image (self, imagename):
+        """завантажуємо 1 картинку"""
+        self.image_name = imagename
+        self.image_path = os.path.join(self.workdir, self.image_name)
+        self.image = Image.open(self.image_path)
+
+    def show_picture(self):
+        """відображуємо картинку"""
+        self.ui.pictures.hide()
+        h = self.ui.pictures.height()
+        w = self.ui.pictures.width()
+        
+        pixmap_image = QPixmap(self.image_path)
+        pixmap_image = pixmap_image.scaled(w, h, Qt.KeepAspectRatio)
+        self.ui.pictures.setPixmap(pixmap_image)
+        self.ui.pictures.show()
+
+    def show_choosen_image(self):
+        """показати вибране зображення """
+        if  self.ui.listpictures.currentRow() >= 0:
+            self.image_name = self.ui.listpictures.currentItem().text()
+            self.load_image(self.image_name)
+            self.show_picture()
+
+    def save_image(self):
+        path = os.path.join(self.workdir, "edited")
+        if not(os.path.exists(path) or os.path.isdir(path)):
+            os.mkdir(path)
+        self.new_path = os.path.join(path, self.image_name)
+        self.newimage.save(self.new_path)
+        self.image_path = self.new_path
 
 
-
-
-
-
+    def bw_button(self):
+        self.newimage = self.image.convert('L')
+        self.save_image()
+        self.show_picture()       
 
 
 
