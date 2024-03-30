@@ -1,5 +1,5 @@
 from PyQt5.QtCore import Qt
-from PIL import Image, ImageFilter
+from PIL import Image, ImageFilter, ImageOps
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtWidgets import QFileDialog
@@ -21,7 +21,10 @@ class Widget(QMainWindow):
 
         self.ui.file.clicked.connect(self.choose_folder)
         self.ui.b_w.clicked.connect(self.bw_button)
-
+        self.ui.left.clicked.connect(self.left_button)
+        self.ui.right.clicked.connect(self.right_button)
+        self.ui.mirror.clicked.connect(self.mirror_button)
+        self.ui.sharpness.clicked.connect(self.blur_btn)
         self.ui.listpictures.currentRowChanged.connect(self.show_choosen_image)
 
     def choose_folder(self):
@@ -82,6 +85,25 @@ class Widget(QMainWindow):
         self.save_image()
         self.show_picture()       
 
+    def left_button(self):
+        self.newimage = self.image.rotate(90)
+        self.save_image()
+        self.show_picture() 
+
+    def right_button(self):
+        self.newimage = self.image.rotate(-90)
+        self.save_image()
+        self.show_picture() 
+
+    def mirror_button(self):
+        self.newimage = ImageOps.mirror(self.image)
+        self.save_image()
+        self.show_picture() 
+
+    def blur_btn(self):
+        self.newimage = self.image.filter(ImageFilter.BoxBlur(4))
+        self.save_image()
+        self.show_picture() 
 
 
 app = QApplication([])

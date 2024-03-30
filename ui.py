@@ -131,7 +131,7 @@ class Ui_MainWindow(object):
         self.left.setText(_translate("MainWindow", "Left"))
         self.right.setText(_translate("MainWindow", "Right"))
         self.mirror.setText(_translate("MainWindow", "Mirror"))
-        self.sharpness.setText(_translate("MainWindow", "Sharpness"))
+        self.sharpness.setText(_translate("MainWindow", "Blur"))
         self.b_w.setText(_translate("MainWindow", "Black/White"))
 
 

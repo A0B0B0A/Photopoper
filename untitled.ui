@@ -179,7 +179,7 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>Sharpness</string>
+     <string>Blur</string>
     </property>
    </widget>
    <widget class="QPushButton" name="b_w">
