@@ -83,27 +83,32 @@ class Widget(QMainWindow):
     def bw_button(self):
         self.newimage = self.image.convert('L')
         self.save_image()
-        self.show_picture()       
+        self.show_picture()      
+        self.image = self.newimage 
 
     def left_button(self):
         self.newimage = self.image.rotate(90)
         self.save_image()
         self.show_picture() 
+        self.image = self.newimage 
 
     def right_button(self):
         self.newimage = self.image.rotate(-90)
         self.save_image()
         self.show_picture() 
+        self.image = self.newimage 
 
     def mirror_button(self):
         self.newimage = ImageOps.mirror(self.image)
         self.save_image()
         self.show_picture() 
+        self.image = self.newimage 
 
     def blur_button(self):
         self.newimage = self.image.filter(ImageFilter.BoxBlur(4))
         self.save_image()
         self.show_picture() 
+        self.image = self.newimage 
 
 
 app = QApplication([])
